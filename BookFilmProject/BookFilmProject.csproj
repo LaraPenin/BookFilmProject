@@ -128,9 +128,53 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LibroController.cs" />
+    <Compile Include="Controllers\PeliculaController.cs" />
+    <Compile Include="DAL\BookfilmContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001301211196_InitialCreate.cs" />
+    <Compile Include="Migrations\202001301211196_InitialCreate.designer.cs">
+      <DependentUpon>202001301211196_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001301248380_fix.cs" />
+    <Compile Include="Migrations\202001301248380_fix.designer.cs">
+      <DependentUpon>202001301248380_fix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001301308308_fix1.cs" />
+    <Compile Include="Migrations\202001301308308_fix1.designer.cs">
+      <DependentUpon>202001301308308_fix1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001301316350_fix2.cs" />
+    <Compile Include="Migrations\202001301316350_fix2.designer.cs">
+      <DependentUpon>202001301316350_fix2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001310748373_fix3.cs" />
+    <Compile Include="Migrations\202001310748373_fix3.designer.cs">
+      <DependentUpon>202001310748373_fix3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001310754472_fix4.cs" />
+    <Compile Include="Migrations\202001310754472_fix4.designer.cs">
+      <DependentUpon>202001310754472_fix4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001310811373_fix5.cs" />
+    <Compile Include="Migrations\202001310811373_fix5.designer.cs">
+      <DependentUpon>202001310811373_fix5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001310813400_fix6.cs" />
+    <Compile Include="Migrations\202001310813400_fix6.designer.cs">
+      <DependentUpon>202001310813400_fix6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001310817506_fix7.cs" />
+    <Compile Include="Migrations\202001310817506_fix7.designer.cs">
+      <DependentUpon>202001310817506_fix7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001311304516_final.cs" />
+    <Compile Include="Migrations\202001311304516_final.designer.cs">
+      <DependentUpon>202001311304516_final.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Libro.cs" />
     <Compile Include="Models\Pelicula.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -140,6 +184,12 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Estilos\librillo.png" />
+    <Content Include="Estilos\librostumblr.jpg" />
+    <Content Include="Estilos\librotumblr.jpg" />
+    <Content Include="Estilos\pelitumblr.jpg" />
+    <Content Include="Estilos\StyleSheet1.css" />
+    <Content Include="Estilos\tape.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -169,12 +219,21 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Libro\Create.cshtml" />
+    <Content Include="Views\Libro\Delete.cshtml" />
+    <Content Include="Views\Libro\Details.cshtml" />
+    <Content Include="Views\Libro\Edit.cshtml" />
+    <Content Include="Views\Libro\Index.cshtml" />
+    <Content Include="Views\Pelicula\Create.cshtml" />
+    <Content Include="Views\Pelicula\Delete.cshtml" />
+    <Content Include="Views\Pelicula\Details.cshtml" />
+    <Content Include="Views\Pelicula\Edit.cshtml" />
+    <Content Include="Views\Pelicula\Index.cshtml" />
+    <Content Include="Views\Home\Principal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Scripts\NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -188,6 +247,38 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202001301211196_InitialCreate.resx">
+      <DependentUpon>202001301211196_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001301248380_fix.resx">
+      <DependentUpon>202001301248380_fix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001301308308_fix1.resx">
+      <DependentUpon>202001301308308_fix1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001301316350_fix2.resx">
+      <DependentUpon>202001301316350_fix2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001310748373_fix3.resx">
+      <DependentUpon>202001310748373_fix3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001310754472_fix4.resx">
+      <DependentUpon>202001310754472_fix4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001310811373_fix5.resx">
+      <DependentUpon>202001310811373_fix5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001310813400_fix6.resx">
+      <DependentUpon>202001310813400_fix6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001310817506_fix7.resx">
+      <DependentUpon>202001310817506_fix7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001311304516_final.resx">
+      <DependentUpon>202001311304516_final.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

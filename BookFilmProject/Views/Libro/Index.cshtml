@@ -1,0 +1,107 @@
+﻿@model IEnumerable<BookFilmProject.Models.Libro>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<html>
+
+    <head>
+        <link rel="Stylesheet" href="~/Estilos/StyleSheet1.css" />
+    </head>
+
+    <body>
+
+        <h1>BOOK & FILM PROJECT</h1>
+        <hr />
+
+        <div>
+            <h2>Sección libros</h2>
+            <img class="libro" src="~/Estilos/librillo.png" />
+
+        </div>
+        <p>
+            @Html.ActionLink("Añade un nuevo libro", "Create")
+        </p>
+
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Author)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Year)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Genre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Theme)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Country)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Language)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Publisher)
+                </th>
+             
+
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Author)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Year)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Genre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Theme)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Country)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Language)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Publisher)
+                    </td>
+              
+
+                    <td>
+                        @Html.ActionLink("Modificar", "Edit", new { id = item.ID }) |
+                        @Html.ActionLink("Ver detalles", "Details", new { id = item.ID }) |
+                        @Html.ActionLink("Eliminar", "Delete", new { id = item.ID })
+                    </td>
+                </tr>
+            }
+
+        </table>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                @Html.ActionLink("Volver a la página principal", "../Home/Principal")
+            </div>
+        }
+        
+    </body>
+</html>

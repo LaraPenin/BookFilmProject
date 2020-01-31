@@ -1,0 +1,101 @@
+﻿@model BookFilmProject.Models.Libro
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+
+    <html>
+
+    <head>
+        <link rel="Stylesheet" href="~/Estilos/StyleSheet1.css" />
+    </head>
+
+    <body>
+
+        <h2>Eliminar</h2>
+
+        <h3>¿Quieres eliminar este libro?</h3>
+        <div>
+           
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Title)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Title)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Author)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Author)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Year)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Year)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Genre)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Genre)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Theme)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Theme)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Country)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Country)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Language)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Language)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Publisher)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Publisher)
+                </dd>
+
+              
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input type="submit" value="Eliminar" class="btn btn-default" /> |
+                    @Html.ActionLink("Volver a la lista", "Index")
+                </div>
+            }
+        </div>
+    </body>
+</html>

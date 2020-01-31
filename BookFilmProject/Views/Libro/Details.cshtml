@@ -1,0 +1,95 @@
+﻿@model BookFilmProject.Models.Libro
+
+@{
+    ViewBag.Title = "Details";
+}
+
+    <html>
+
+    <head>
+        <link rel="Stylesheet" href="~/Estilos/StyleSheet1.css" />
+    </head>
+
+    <body>
+
+
+        <h2>Detalles del libro</h2>
+
+        <div>
+            <h4>Libro</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Title)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Title)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Author)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Author)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Year)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Year)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Genre)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Genre)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Theme)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Theme)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Country)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Country)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Language)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Language)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Publisher)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Publisher)
+                </dd>
+
+
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Modificar", "Edit", new { id = Model.ID }) |
+            @Html.ActionLink("Volver a la lista", "Index")
+        </p>
+    </body>
+</html>

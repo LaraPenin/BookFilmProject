@@ -1,0 +1,108 @@
+﻿@model BookFilmProject.Models.Pelicula
+
+@{
+    ViewBag.Title = "Details";
+}
+
+    <html>
+
+    <head>
+        <link rel="Stylesheet" href="~/Estilos/StyleSheet1.css" />
+    </head>
+
+    <body>
+
+        <h2>Detalles de la película</h2>
+
+        <div>
+            <h4>Pelicula</h4>
+            <hr />
+            <dl class="dl-horizontal">
+
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Title)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Title)
+                </dd>
+
+                <dt>
+                   <!-- Html.DisplayNameFor(model => model.Libro.Title)-->
+                    Book
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Libro.Title)
+                   
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Director)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Director)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Year)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Year)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Genre)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Genre)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Theme)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Theme)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Country)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Country)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Language)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Language)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Music)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Music)
+                </dd>
+
+             
+
+
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Modificar", "Edit", new { id = Model.FilmID }) |
+            @Html.ActionLink("Volver a la lista", "Index")
+        </p>
+    </body>
+</html>
