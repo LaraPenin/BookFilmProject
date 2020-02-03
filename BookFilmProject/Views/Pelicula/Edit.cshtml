@@ -14,6 +14,7 @@
 
         <h2>Modificaciones</h2>
 
+        <!--MODIFICACIONES EN LOS CAMPOS DE UNA PELÍCULA YA AÑADIDA-->
 
         @using (Html.BeginForm())
         {
@@ -89,7 +90,7 @@
                     </div>
                 </div>
 
-              
+
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.LibroID, "LibroID", htmlAttributes: new { @class = "control-label col-md-2" })
@@ -107,6 +108,8 @@
                 </div>
             </div>
         }
+
+        <!--LINK A LA LISTA PRINCIPAL-->
 
         <div>
             @Html.ActionLink("Volver a la lista", "Index")

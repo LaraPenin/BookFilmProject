@@ -12,11 +12,13 @@
 
     <body>
 
+        <!--SE NOS MUESTRA INFORMACIÓN DE LA PELÍCULA A ELIMINAR EN UNA LISTA-->
+        
         <h2>Eliminar</h2>
 
         <h3>¿Quieres eliminar esta película?</h3>
         <div>
-           
+
             <hr />
             <dl class="dl-horizontal">
 
@@ -94,17 +96,19 @@
                     @Html.DisplayFor(model => model.Music)
                 </dd>
 
-               
+
 
 
             </dl>
+
+            <!--LINK A LA LISTA PRINCIPAL-->
 
             @using (Html.BeginForm())
             {
                 @Html.AntiForgeryToken()
 
                 <div class="form-actions no-color">
-                    <input type="submit" value="Eliminar" class="btn btn-default" /> 
+                    <input type="submit" value="Eliminar" class="btn btn-default" />
                     @Html.ActionLink("Volver a la lista", "Index")
                 </div>
             }

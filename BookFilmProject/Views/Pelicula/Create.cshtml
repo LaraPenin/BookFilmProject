@@ -12,6 +12,7 @@
     </head>
 
     <body>
+        <!--CAMPOS PARA AÑADIR UNA NUEVA PELÍCULA-->
 
         <h2>Añadir</h2>
 
@@ -87,12 +88,12 @@
                         @Html.ValidationMessageFor(model => model.Music, "", new { @class = "text-danger" })
                     </div>
                 </div>
-                          
+
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.LibroID, "LibroID", htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
-                        @Html.DropDownList("LibroID", null, htmlAttributes: new { @class = "form-control"})
+                        @Html.DropDownList("LibroID", null, htmlAttributes: new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.LibroID, "", new { @class = "text-danger" })
                     </div>
                 </div>
@@ -104,6 +105,8 @@
                 </div>
             </div>
         }
+
+        <!--LINK A LA LISTA PRINCIPAL-->
 
         <div>
             @Html.ActionLink("Volver a la lista", "Index")

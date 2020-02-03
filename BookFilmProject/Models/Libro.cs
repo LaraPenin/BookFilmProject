@@ -5,6 +5,9 @@ using System.Web;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
+
+//CREACIÓN DE LA CLASE LIBRO
+//Algunos campos van definidos como clave primaria, Generados automaticamente y Requeridos
 namespace BookFilmProject.Models
 {
     public class Libro

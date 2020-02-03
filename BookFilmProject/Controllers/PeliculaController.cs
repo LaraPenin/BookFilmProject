@@ -9,6 +9,8 @@ using System.Web.Mvc;
 using BookFilmProject.DAL;
 using BookFilmProject.Models;
 
+//Este es el CONTROLADOR del la VISTA PELÍCULA con los metodos que nos llevan a las vistas
+
 namespace BookFilmProject.Controllers
 {
     public class PeliculaController : Controller

@@ -12,7 +12,7 @@
     </head>
 
     <body>
-
+        <!--CAMPOS PARA AÑADIR UN NUEVO LIBRO-->
 
         <h2>Añadir</h2>
 
@@ -89,7 +89,7 @@
                     </div>
                 </div>
 
-               
+
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
                         <input type="submit" value="Añadir" class="btn btn-default" />
@@ -98,6 +98,8 @@
             </div>
         }
 
+        <!--LINK A LA LISTA PRINCIPAL-->
+
         <div>
             @Html.ActionLink("Volver a la lista", "Index")
         </div>
@@ -105,5 +107,5 @@
         @section Scripts {
             @Scripts.Render("~/bundles/jqueryval")
         }
-  </body>
+    </body>
 </html>
